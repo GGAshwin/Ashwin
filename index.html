@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Ash</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--Home Section-->
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Ashwin Prabhu</div>
+                <div class="text-3">And I'm a <span id="app">Web Designer</span></div>
+                <button id="home_button">
+                    Contact me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--About section-->
+
+    <section class="about" id="about">
+        <header class="about-header">
+            <h1>About me</h1>
+        </header>
+        <div class="container" data-aos="fade-up">
+            <div class="item" id="box1"><img src="images/man.jpg" alt=""></div>
+            <div class="item" id="box2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis aspernatur quis,
+                    numquam asperiores fugiat? Amet unde sed odit iste nemo hic similique sequi placeat. Sint, ex.
+                    Similique debitis quaerat aperiam qui quod corporis eius eaque at vitae et libero reprehenderit
+                    maxime aliquid quos animi laboriosam maiores, doloremque delectus ut. <br><button
+                        id="about_button">button</button>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Services section-->
+
+    <section class="service" id="service">
+        <header>
+            <h1>
+                Services
+            </h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ab provident soluta
+            </p>
+        </header>
+        <div class="flex-grid-thirds" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <div class="col"><img src="images/outline_devices_black_24dp.png" alt="logo" class="service-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quo optio aut cupiditate est
+                    tenetur dolore inventore natus ducimus, asperiores minus, cumque repudiandae ratione architecto.
+                    Provident, at. Et, consequuntur facere?</p>
+            </div>
+            <div class="col"><img src="images/outline_person_black_24dp.png" alt="logo" class="service-img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officia aut similique quaerat aliquam
+                    consectetur deserunt corrupti dolor nemo amet. Vel, blanditiis. Architecto, rerum officia!</p>
+            </div>
+            <div class="col"><img src="images/outline_verified_black_24dp.png" alt="logo">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur soluta, error, vitae dicta earum
+                    incidunt neque molestiae voluptas laudantium ut ducimus tempora corrupti, aperiam aut.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Projects section-->
+    <section class="project" id="project">
+        <header>
+            <h1>Projects</h1>
+        </header>
+        <div class="flex-container" data-aos="zoom-in-up">
+            <div class="cards" id="card1"><img src="images/cropped/1.jpg" alt=""></div>
+            <div class="cards" id="card2"><img src="images/cropped/2.jpg" alt=""></div>
+            <div class="cards" id="card3"><img src="images/cropped/3.jpg" alt=""></div>
+            <div class="cards" id="card4"><img src="images/cropped/4.jpg" alt=""></div>
+            <div class="cards" id="card5"><img src="images/cropped/5.jpg" alt=""></div>
+            <div class="cards" id="card6"><img src="images/cropped/6.jpg" alt=""></div>
+        </div>
+    </section>
+
+    <!--Contact section-->
+
+    <section class="contact" id="contact">
+        <header>
+            <h1>Contact</h1>
+        </header>
+        <div class="contact-container" data-aos="zoom-in-up">
+            <header>
+                <h1>Have Any questions?</h1>
+                <p>Get In Touch</p>
+            </header>
+            <div id="content">
+                <label for="name" id="name">Name</label>
+                <input type="text" id="name" required>
+
+                <label for="emain" id="email">Email</label>
+                <input type="email" name="email">
+
+                <label for="feedback" id="feedback">Give a Feedback</label>
+                <textarea id="subject" name="subject"></textarea>
+                <button id="contact_button">Submit</button>
+            </div>
+        </div>
+        <div id="icons">
+            <ul>
+                <li><img src="images/facebook.svg" alt="" class="icon-image"></li>
+                <li><img src="images/instagram.svg" alt="" class="icon-image"></li>
+                <li><img src="images/linkedin.svg" alt="" class="icon-image"></li>
+                <li><img src="images/github.svg" alt="" class="icon-image"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
