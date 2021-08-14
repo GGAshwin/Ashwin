@@ -1,150 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>BootStrap Website</title>
 </head>
 
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">Ash</label>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!--Home Section-->
-
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Ashwin Prabhu</div>
-                <div class="text-3">And I'm a <span id="app">Web Designer</span></div>
-                <button id="home_button">
-                    Contact me
+    <section id="nav_section">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" style="color: white;">Ash</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <li><a class="nav-link " href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#services">Services</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="bg-dark text-light pt-5 p-lg-0 pt-lg-5 text-center text-sm-start" id="home">
+        <div class="container py-sm-4">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>
+                        Lorem ipsum dolor <span class="text-warning"> it amet consectetur</span> adipisicing elit.
+                        Eaque, magni.
+                    </h1>
+                    <p class="lead my-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum similique odit omnis?
+                        Dolorum veniam voluptatibus
+                    </p>
+                    <button class="btn btn-primary btn-lg">See More</button>
+                </div>
+                <img class="img-fluid w-50 ml-auto d-none d-sm-block"
+                    src="images/image-from-rawpixel-id-2796300-png.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="bg-primary text-light p-5" id="newsletter">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 mb-md-0">Sign up for Our Newsletter</h3>
+                <div class="input-group news-input">
+                    <input type="text" class="form-control" placeholder="Enter E-mail" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-dark btn-dark btn-lg" type="button">Button</button>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="p-5" id="about">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <img src="images/1.jpg" class="img-fluid " alt="">
+                </div>
+                <div class="col-md p-3">
+                    <h2>
+                        Lorem ipsum dolor sit amet.
+                    </h2>
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat aut similique quidem
+                        architecto delectus hic minus ea recusandae, accusamus facere.
+                    </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, neque?</p>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-3">
+                    <h2>
+                        Lorem ipsum dolor sit amet.
+                    </h2>
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat aut similique quidem
+                        architecto delectus hic minus ea recusandae, accusamus facere.
+                    </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, neque?</p>
+                </div>
+                <div class="col-md">
+                    <img src="images/2.jpg" class="img-fluid " alt="">
+                </div>
             </div>
         </div>
     </section>
 
-    <!--About section-->
-
-    <section class="about" id="about">
-        <header class="about-header">
-            <h1>About me</h1>
-        </header>
-        <div class="container" data-aos="fade-up">
-            <div class="item" id="box1"><img src="images/man.jpg" alt=""></div>
-            <div class="item" id="box2">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis aspernatur quis,
-                    numquam asperiores fugiat? Amet unde sed odit iste nemo hic similique sequi placeat. Sint, ex.
-                    Similique debitis quaerat aperiam qui quod corporis eius eaque at vitae et libero reprehenderit
-                    maxime aliquid quos animi laboriosam maiores, doloremque delectus ut. <br><button
-                        id="about_button">button</button>
-                </p>
+    <section class="p-5 bg-info" id="services">
+        <div class="container">
+            <div class="service-text ">
+                <h1 class="text-center">Services</h1>
+                <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, aliquid? Lorem
+                    ipsum dolor sit amet.</p>
             </div>
-        </div>
+            <div class="row text-center g-4">
+                <div class="col-md">
+                    <div class=" bg-dark text-light">
+                        <!--<div class="card bg-dark text-light">-->
+                        <!--Card is a BootStrap class-->
+                        <!--Note the class card is caucing the expansion of a tag problem-->
+                        <div class="h1 mb-3">
+                            <i class="bi bi-laptop"></i>
 
-    </section>
+                        </div>
+                        <h3 class="card-title mb-3">
+                            virtual
+                        </h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus. Lorem ipsum
+                            dolor sit amet consectetur adipisicing.
+                        </p>
+                        <a href=""><button type="button" class="btn btn-primary my-3">Read more</button></a>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class=" bg-dark text-light">
+                        <div class="h1 mb-3">
+                            <i class="bi bi-laptop"></i>
 
-    <!--Services section-->
+                        </div>
+                        <h3 class="card-title mb-3">
+                            virtual
+                        </h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus. Lorem ipsum
+                            dolor sit amet consectetur adipisicing.
+                        </p>
+                        <a href=""><button type="button" class="btn btn-primary my-3">Read more</button></a>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class=" bg-dark text-light">
+                        <div class="h1 mb-3">
+                            <i class="bi bi-laptop"></i>
 
-    <section class="service" id="service">
-        <header>
-            <h1>
-                Services
-            </h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ab provident soluta
-            </p>
-        </header>
-        <div class="flex-grid-thirds" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <div class="col"><img src="images/outline_devices_black_24dp.png" alt="logo" class="service-img">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quo optio aut cupiditate est
-                    tenetur dolore inventore natus ducimus, asperiores minus, cumque repudiandae ratione architecto.
-                    Provident, at. Et, consequuntur facere?</p>
+                        </div>
+                        <h3 class="card-title mb-3">
+                            virtual
+                        </h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus. Lorem ipsum
+                            dolor sit amet consectetur adipisicing.
+                        </p>
+                        <a href=""><button type="button" class="btn btn-primary my-3">Read more</button></a>
+
+                    </div>
+                </div>
             </div>
-            <div class="col"><img src="images/outline_person_black_24dp.png" alt="logo" class="service-img">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officia aut similique quaerat aliquam
-                    consectetur deserunt corrupti dolor nemo amet. Vel, blanditiis. Architecto, rerum officia!</p>
-            </div>
-            <div class="col"><img src="images/outline_verified_black_24dp.png" alt="logo">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur soluta, error, vitae dicta earum
-                    incidunt neque molestiae voluptas laudantium ut ducimus tempora corrupti, aperiam aut.</p>
-            </div>
-        </div>
-    </section>
-
-    <!--Projects section-->
-    <section class="project" id="project">
-        <header>
-            <h1>Projects</h1>
-        </header>
-        <div class="flex-container" data-aos="zoom-in-up">
-            <div class="cards" id="card1"><img src="images/cropped/1.jpg" alt=""></div>
-            <div class="cards" id="card2"><img src="images/cropped/2.jpg" alt=""></div>
-            <div class="cards" id="card3"><img src="images/cropped/3.jpg" alt=""></div>
-            <div class="cards" id="card4"><img src="images/cropped/4.jpg" alt=""></div>
-            <div class="cards" id="card5"><img src="images/cropped/5.jpg" alt=""></div>
-            <div class="cards" id="card6"><img src="images/cropped/6.jpg" alt=""></div>
-        </div>
-    </section>
-
-    <!--Contact section-->
-
-    <section class="contact" id="contact">
-        <header>
-            <h1>Contact</h1>
-        </header>
-        <div class="contact-container" data-aos="zoom-in-up">
-            <header>
-                <h1>Have Any questions?</h1>
-                <p>Get In Touch</p>
-            </header>
-            <div id="content">
-                <label for="name" id="name">Name</label>
-                <input type="text" id="name" required>
-
-                <label for="emain" id="email">Email</label>
-                <input type="email" name="email">
-
-                <label for="feedback" id="feedback">Give a Feedback</label>
-                <textarea id="subject" name="subject"></textarea>
-                <button id="contact_button">Submit</button>
-            </div>
-        </div>
-        <div id="icons">
-            <ul>
-                <li><img src="images/facebook.svg" alt="" class="icon-image"></li>
-                <li><img src="images/instagram.svg" alt="" class="icon-image"></li>
-                <li><img src="images/linkedin.svg" alt="" class="icon-image"></li>
-                <li><img src="images/github.svg" alt="" class="icon-image"></li>
-            </ul>
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <section class="p-5" id="contact">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">feedback</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary my-3">Submit</button>
+        </div>
+    </section>
+
+    <footer class="p-5 bg-dark">
+        <div class="contianer text-center text-light">
+            <p>Made By <a href="https://ashwin.vercel.app/" id="ashwin">Ashwin</a></p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
