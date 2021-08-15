@@ -107,7 +107,7 @@ label.logo {
   color: white;
   font-size: 35px;
   line-height: 80px;
-  padding: 0 100px;
+  padding: 0px 20px;
   font-weight: bold;
 }
 
@@ -609,9 +609,7 @@ textarea:focus {
   #check:checked ~ ul {
     left: 0;
   }
-  nav .logo {
-    display: none;
-  }
+
   /*Home*/
   .home .home-content .text-2 {
     font-weight: 600;
