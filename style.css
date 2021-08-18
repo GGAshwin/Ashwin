@@ -90,7 +90,7 @@
     background-color: var(--hot-pink);
 }*/
 nav {
-  background: var(--baby-blu);
+  background: #5f7782;
   height: 80px;
   width: 100%;
   position: fixed;
@@ -522,6 +522,7 @@ a.active, a:hover {
 .contact .contact-container textarea {
   width: 365px;
   height: 155px;
+  resize: vertical;
   border: 2px solid var(--dark);
 }
 
@@ -609,7 +610,6 @@ textarea:focus {
   #check:checked ~ ul {
     left: 0;
   }
-
   /*Home*/
   .home .home-content .text-2 {
     font-weight: 600;

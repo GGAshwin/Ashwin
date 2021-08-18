@@ -85,7 +85,7 @@
 }*/
 
 nav{
-    background: var(--baby-blu);
+    background: #5f7782;
     height: 80px;
     width: 100%;
     position: fixed;
@@ -398,6 +398,7 @@ img:hover{
         textarea{
             width: 365px;
     height: 155px;
+    resize: vertical;
     border: 2px solid var(--dark);
         }
     }
