@@ -230,8 +230,8 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-    html{
-    width: 100vw;
+    html,body{
+    overflow-x:hidden ;
     }
     .nav-menu {
         z-index: 10;
