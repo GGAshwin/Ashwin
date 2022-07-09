@@ -261,6 +261,9 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  html {
+    width: 100vh;
+  }
   .nav-menu {
     z-index: 10;
     position: fixed;
