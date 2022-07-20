@@ -408,6 +408,7 @@ a {
     height: 100vh;
   }
   #about {
+    background-image: none;
     position: relative;
     z-index: 0;
     flex-direction: column;
