@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
 :root {
-  --bg:#ffb5b5;
+  --bg:#505050;
 }
 
 * {
@@ -88,26 +88,31 @@ a {
   background-color: var(--bg);
   color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   min-height: auto;
-  padding: 50px;
+  flex-direction: column;
+  padding: 50px 0;
   height: 100vh;
 }
 #home .home-image {
   width: 30%;
-  padding: 20px;
+  padding: 25px;
 }
 #home .home-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   position: relative;
   width: 50%;
+  text-align: center;
 }
 #home .home-container .home-title {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin: 10px 0;
 }
 #home .home-container .home-subtitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 10px 0 15px 0;
 }
 #home .home-container .home-btn {
@@ -185,7 +190,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffb5b5;
+  background-color: var(--bg);
 }
 #project .project-container {
   position: relative;
