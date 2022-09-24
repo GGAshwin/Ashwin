@@ -444,6 +444,8 @@ body {
     z-index: 0;
     flex-direction: column;
     background-color: var(--bg);
+    color: black;
+    padding: 90px 20px 20px 20px;
   }
   #about .about-avatar {
     margin-right: 0;
@@ -454,8 +456,12 @@ body {
   }
   #about .resume-btn {
     text-align: center;
+    padding: 10px;
     background-color: #000000;
     margin-bottom: 20px;
+  }
+  #project {
+    padding: 90px 20px 20px 20px;
   }
   .vanta-canvas {
     display: none;

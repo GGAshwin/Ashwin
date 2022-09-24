@@ -414,6 +414,7 @@ section {
 }
 
 #footer {
+    // background-color: rgb(255, 48, 48);
 
     // padding: 20px;
     .footer-container {
@@ -512,6 +513,8 @@ section {
         z-index: 0;
         flex-direction: column;
         background-color: var(--bg);
+        color: black;
+        padding: 90px 20px 20px 20px;
 
         .about-avatar {
             margin-right: 0;
@@ -524,11 +527,14 @@ section {
 
         .resume-btn {
             text-align: center;
+            padding: 10px;
             background-color: #000000;
             margin-bottom: 20px;
         }
     }
-
+    #project{
+        padding: 90px 20px 20px 20px;
+    }
     .vanta-canvas {
         display: none;
     }
