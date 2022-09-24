@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
-:root {
-  --bg: #505050;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +23,10 @@ a {
   color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
-  padding: 10px 8px;
+  padding: 20px;
   width: 100%;
   z-index: 999;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .brand-title a {
@@ -103,7 +100,6 @@ section {
   z-index: 1;
   min-width: 100%;
   background-color: var(--bg);
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,8 +109,9 @@ section {
   height: 100vh;
 }
 #home .home-image {
-  width: 30%;
+  width: 20%;
   padding: 25px;
+  margin-top: 45px;
 }
 #home .home-container {
   display: flex;
@@ -130,7 +127,7 @@ section {
 }
 #home .home-container .home-subtitle {
   font-size: 3rem;
-  margin: 10px 0 15px 0;
+  margin: 10px 0 33px 0;
 }
 #home .home-container .home-btn {
   background-color: #E2E8F0;
@@ -215,7 +212,7 @@ section {
 }
 
 #project {
-  padding: 50px 20px;
+  padding: 90px 20px;
   min-height: 100vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;

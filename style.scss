@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 :root {
-    --bg: #505050;
+    // --bg: #505050;
 }
 
 * {
@@ -29,9 +29,10 @@ a {
     color: rgb(0, 0, 0);
     position: fixed;
     top: 0;
-    padding: 10px 8px;
+    padding: 20px ;
     width: 100%;
     z-index: 999;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .brand-title {
@@ -107,7 +108,7 @@ section {
     z-index: 1;
     min-width: 100%;
     background-color: var(--bg);
-    color: #fff;
+    // color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,8 +118,9 @@ section {
     height: 100vh;
 
     .home-image {
-        width: 30%;
+        width: 20%;
         padding: 25px;
+        margin-top: 45px;
         // background-color: rgb(91, 182, 230);
     }
 
@@ -137,7 +139,7 @@ section {
 
         .home-subtitle {
             font-size: 3.0rem;
-            margin: 10px 0 15px 0;
+            margin: 10px 0 33px 0;
         }
 
         .home-btn {
@@ -235,7 +237,7 @@ section {
 }
 
 #project {
-    padding: 50px 20px;
+    padding: 90px 20px;
     min-height: 100vh;
     max-height: fit-content;
     display: flex;
