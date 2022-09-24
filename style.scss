@@ -30,6 +30,11 @@ html {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgb(255, 65, 65);
+    transition: .6s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+    transition: .6s ease-in-out;
+    border-radius: 10px;
 }
 
 a {
