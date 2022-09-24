@@ -17,6 +17,21 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 65, 65);
+}
+
 a {
     text-decoration: none;
 }
@@ -29,7 +44,7 @@ a {
     color: rgb(0, 0, 0);
     position: fixed;
     top: 0;
-    padding: 20px ;
+    padding: 20px;
     width: 100%;
     z-index: 999;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -180,13 +195,14 @@ section {
 
         .about-subtitle {
             font-size: 3.0rem;
-                margin: 10px 0 15px 0;
+            margin: 10px 0 15px 0;
 
             a {
                 color: #f72f2f;
                 text-decoration: none;
                 transition: .3s ease-in-out;
-                &:hover{
+
+                &:hover {
                     border-bottom: 3px solid white;
                 }
             }
@@ -532,9 +548,11 @@ section {
             margin-bottom: 20px;
         }
     }
-    #project{
+
+    #project {
         padding: 90px 20px 20px 20px;
     }
+
     .vanta-canvas {
         display: none;
     }
