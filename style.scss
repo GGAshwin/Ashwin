@@ -254,7 +254,7 @@ section {
 }
 
 #about {
-    color: #f1f1f1;
+    // color: #f1f1f1;
     padding: 50px 20px;
     min-height: 100vh;
     max-height: fit-content;
@@ -305,13 +305,13 @@ section {
                 color: #f72f2f;
                 transition: .3s ease-in-out;
 
-                &:hover {
-                    color: black;
-                    background-color: white;
-                    padding: 10px;
-                    margin-top: 10px;
-                    border-radius: 7px;
-                }
+                // &:hover {
+                //     color: black;
+                //     background-color: white;
+                //     padding: 10px;
+                //     margin-top: 10px;
+                //     border-radius: 7px;
+                // }
             }
         }
     }
