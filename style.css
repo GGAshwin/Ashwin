@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+:root {
+  --main: rgb(255, 65, 65);
+  --light: rgb(228, 228, 228);
+}
+
 #hidden {
-  position: absolute;
-  top: 0;
-  right: 0;
+  height: 100vh;
   z-index: -999;
   opacity: 0;
   transition: opacity 1s ease-out;
@@ -194,12 +197,12 @@ a {
 }
 
 .navbar-links li:hover {
-  background-color: rgb(29, 29, 29);
+  background-color: rgb(255, 48, 48);
   border-radius: 5px;
 }
 
 .navbar-links li a:hover {
-  color: rgb(255, 48, 48);
+  color: #fff;
 }
 
 .toggle-button {
@@ -314,11 +317,12 @@ section {
   margin-top: 10px;
 }
 #about .about-container .resume-btn a {
-  color: #f72f2f;
+  color: var(--main);
   transition: 0.3s ease-in-out;
 }
 #about .about-container .resume-btn a:hover {
-  color: #121212;
+  transform: translateY(50px);
+  border-bottom: 2px solid rgb(230, 33, 33);
 }
 #about .about-avatar {
   margin-right: 50px;
