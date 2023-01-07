@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
         const loading = document.querySelector('.loading')
         loading.id = "hidden"
         if (loading.style.opacity == 0) {
-            console.log('yes');
             setTimeout(() => {
                 loading.style.display = "none"
             }, 2000)
