@@ -296,7 +296,9 @@ $footer: #D9D9D9;
         align-items: center;
         gap: 20px;
         flex-direction: column;
-
+        h2{
+            text-align: center;
+        }
         span {
             color: $red1;
         }

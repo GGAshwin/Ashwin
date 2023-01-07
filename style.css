@@ -285,6 +285,9 @@ body {
   gap: 20px;
   flex-direction: column;
 }
+#home-section #hero-content h2 {
+  text-align: center;
+}
 #home-section #hero-content span {
   color: #A91629;
 }
