@@ -10,6 +10,7 @@
 $bg1: #030303;
 $text1: #FFFFFF;
 $red1: #A91629;
+$red2: #dc0320;
 $bg2: #25262A;
 $footer: #D9D9D9;
 
@@ -300,7 +301,7 @@ $footer: #D9D9D9;
             text-align: center;
         }
         span {
-            color: $red1;
+            color: $red2;
         }
     }
 }

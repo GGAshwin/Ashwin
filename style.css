@@ -80,8 +80,7 @@
   border-top: 3px solid #fff000;
   border-right: 3px solid #fff000;
   border-radius: 50%;
-  -webkit-animation: animateC 2s linear infinite;
-          animation: animateC 2s linear infinite;
+  animation: animateC 2s linear infinite;
 }
 
 .loadSpan {
@@ -93,8 +92,7 @@
   height: 4px;
   background: transparent;
   transform-origin: left;
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
+  animation: animate 2s linear infinite;
 }
 
 .loadSpan:before {
@@ -109,29 +107,12 @@
   box-shadow: 0 0 20px #fff000;
 }
 
-@-webkit-keyframes animateC {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes animateC {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes animate {
-  0% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(405deg);
   }
 }
 @keyframes animate {
@@ -237,7 +218,7 @@
 
 @media only screen and (max-width: 768px) {
   html,
-body {
+  body {
     overflow-x: hidden;
   }
   .toggle-button {
@@ -289,7 +270,7 @@ body {
   text-align: center;
 }
 #home-section #hero-content span {
-  color: #A91629;
+  color: #dc0320;
 }
 
 @media only screen and (max-width: 768px) {
@@ -495,7 +476,7 @@ body {
     width: 100%;
   }
   #contact-section #form-container form input[type=text],
-#contact-section #form-container form input[type=email] {
+  #contact-section #form-container form input[type=email] {
     padding: 0 10px;
     width: 100%;
   }
