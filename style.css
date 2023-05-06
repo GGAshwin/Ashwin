@@ -362,6 +362,12 @@
   min-height: 100vh;
   background-color: #25262A;
   padding: 50px;
+  /* End Non-Essential  */
+  /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+  /* Top Half of card, image. */
+  /* Bottom Card Section */
+  /* Social Icons */
+  /* Property Cards Hover States */
 }
 #project-section #section-title {
   text-align: center;
@@ -371,45 +377,84 @@
 #project-section #section-title span {
   color: #A91629;
 }
-#project-section #project-card-section {
+#project-section .center {
   min-height: 100vh;
-  max-width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
 }
-#project-section #project-card-section .project-card {
-  width: 30%;
+#project-section .property-card {
+  height: 18em;
+  width: 14em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  overflow: hidden;
 }
-#project-section #project-card-section .project-card .card-img img {
-  width: 100%;
-  border-radius: 20px;
+#project-section .property-image {
+  height: 6em;
+  width: 14em;
+  padding: 1em 2em;
+  position: Absolute;
+  top: 0px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#project-section #project-card-section .project-card .card-title {
-  color: #FFFFFF;
-  font-size: 0.5em;
+#project-section .one {
+  background-image: url("./images/blog.png");
+}
+#project-section .two {
+  background-image: url("./images/socail.png");
+}
+#project-section .three {
+  background-image: url("./images/weather.png");
+}
+#project-section .four {
+  background-image: url("./images/elec.png");
+}
+@media only screen and (max-width: 600px) {
+  #project-section .center {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+#project-section .property-description {
+  background-color: #FAFAFC;
+  height: 12em;
+  position: absolute;
+  bottom: 0em;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align: center;
+}
+#project-section .property-social-icons {
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#project-section .property-card:hover .property-description {
+  height: 0em;
+  padding: 0px 1em;
+}
+#project-section .property-card:hover .property-image {
+  height: 18em;
+}
+#project-section .property-card:hover .property-social-icons {
+  background-color: white;
+}
+#project-section .property-card:hover .property-social-icons:hover {
+  background-color: blue;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
-  #project-section #section-title {
-    margin-bottom: 20px;
-  }
-  #project-section #project-card-section {
-    display: block;
-  }
-  #project-section #project-card-section .project-card {
-    width: 100%;
-    margin: 0 0 60px 0;
-  }
-  #project-section #project-card-section .project-card .card-title {
-    font-size: 1em;
-  }
-  #project-section #project-card-section .project-card .card-title h2 {
-    font-weight: 300;
-    font-size: 1.2em;
-  }
-}
 #contact-section {
   min-height: 70vh;
   background-color: #030303;

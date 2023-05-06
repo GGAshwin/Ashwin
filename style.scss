@@ -297,9 +297,11 @@ $footer: #D9D9D9;
         align-items: center;
         gap: 20px;
         flex-direction: column;
-        h2{
+
+        h2 {
             text-align: center;
         }
+
         span {
             color: $red2;
         }
@@ -425,55 +427,126 @@ $footer: #D9D9D9;
         }
     }
 
-    #project-card-section {
+    .center {
         min-height: 100vh;
-        max-width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        flex-wrap: wrap;
+    }
 
-        .project-card {
-            width: 30%;
+    /* End Non-Essential  */
 
-            .card-img {
-                img {
-                    width: 100%;
-                    border-radius: 20px;
-                }
-            }
+    .property-card {
+        height: 18em;
+        width: 14em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        border-radius: 16px;
+        overflow: hidden;
+    }
 
-            .card-title {
-                color: $text1;
-                font-size: 0.5em;
-            }
+    /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+    /* Top Half of card, image. */
+
+    .property-image {
+        height: 6em;
+        width: 14em;
+        padding: 1em 2em;
+        position: Absolute;
+        top: 0px;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        // background-image: url('./images/blog.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .one{
+        background-image: url('./images/blog.png');
+    }
+
+    .two{
+        background-image: url('./images/socail.png');
+    }
+
+    .three{
+        background-image: url('./images/weather.png');
+    }
+
+    .four{
+        background-image: url('./images/elec.png');
+    }
+
+    @media only screen and (max-width: 600px) {
+        .center{
+            flex-direction: column;
+            gap: 50px;
         }
+      }
+
+    /* Bottom Card Section */
+
+    .property-description {
+        background-color: #FAFAFC;
+        height: 12em;
+        // width: 14em;
+        position: absolute;
+        bottom: 0em;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        padding: 0.5em 1em;
+        text-align: center;
+    }
+
+    /* Social Icons */
+
+    .property-social-icons {
+        width: 1em;
+        height: 1em;
+        background-color: black;
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    /* Property Cards Hover States */
+
+    .property-card:hover .property-description {
+        height: 0em;
+        padding: 0px 1em;
+    }
+
+    .property-card:hover .property-image {
+        height: 18em;
+    }
+
+    .property-card:hover .property-social-icons {
+        background-color: white;
+    }
+
+    .property-card:hover .property-social-icons:hover {
+        background-color: blue;
+        cursor: pointer;
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    #project-section #section-title {
-        margin-bottom: 20px;
-    }
 
-    #project-section #project-card-section {
-        display: block;
-
-        .project-card {
-            width: 100%;
-            margin: 0 0 60px 0;
-
-            .card-title {
-                font-size: 1em;
-
-                h2 {
-                    font-weight: 300;
-                    font-size: 1.2em;
-                }
-            }
-        }
-    }
-}
 
 // contact section
 #contact-section {
