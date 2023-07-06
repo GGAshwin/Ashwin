@@ -373,12 +373,13 @@
   text-align: center;
   font-size: 3em;
   color: #FFFFFF;
+  margin-top: 40px;
 }
 #project-section #section-title span {
   color: #A91629;
 }
 #project-section .center {
-  min-height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -416,10 +417,24 @@
 #project-section .four {
   background-image: url("./images/elec.png");
 }
+@media only screen and (max-width: 1000px) {
+  #project-section .center {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    padding-top: 20px;
+  }
+  #project-section #section-title {
+    margin-bottom: 10px;
+  }
+}
 @media only screen and (max-width: 600px) {
   #project-section .center {
-    flex-direction: column;
-    gap: 50px;
+    grid-template-columns: 1fr;
   }
 }
 #project-section .property-description {
@@ -515,7 +530,7 @@
   }
   #contact-section #form-container {
     width: 80%;
-    margin-top: 20%;
+    margin-top: 0;
   }
   #contact-section #form-container form {
     width: 100%;
