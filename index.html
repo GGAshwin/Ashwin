@@ -18,96 +18,97 @@
 </head>
 <body class="hero-bg min-h-screen antialiased">
 
-  <!-- NAV -->
-  <header class="w-full absolute top-0 left-0 z-30">
-    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#home" class="text-white text-lg font-semibold">Ashwin<span class="ml-1 text-red-500">.</span></a>
-      <div class="space-x-4 hidden sm:flex">
-        <a href="#about" class="text-sm text-gray-300 hover:text-white">About</a>
-        <a href="#projects" class="text-sm text-gray-300 hover:text-white">Projects</a>
-        <a href="#contact" class="text-sm text-gray-300 hover:text-white">Contact</a>
+<!-- NAV -->
+<header id="navbar" class="w-full fixed top-0 left-0 z-50 transition-colors duration-300">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="text-white text-lg font-semibold">
+      Ashwin<span class="ml-1 text-red-500">.</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="space-x-4 hidden sm:flex">
+      <a href="#about" class="text-sm text-gray-300 hover:text-white">About</a>
+      <a href="#projects" class="text-sm text-gray-300 hover:text-white">Projects</a>
+      <a href="#contact" class="text-sm text-gray-300 hover:text-white">Contact</a>
+    </div>
+
+    <!-- Mobile button -->
+    <div class="sm:hidden text-gray-300">
+      <button id="menu-btn" aria-label="Open menu" class="text-xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile dropdown menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-[#030303]/95 backdrop-blur-md border-t border-gray-700">
+    <div class="flex flex-col space-y-3 px-6 py-4">
+      <a href="#about" class="text-gray-300 hover:text-white">About</a>
+      <a href="#projects" class="text-gray-300 hover:text-white">Projects</a>
+      <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO / HOME -->
+<main id="home" class="min-h-screen flex items-center hero-bg">
+  <div class="max-w-6xl mx-auto px-6 py-24 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Image (first on mobile, second on desktop) -->
+      <div class="order-1 md:order-2 flex justify-center">
+        <img src="images/PXL_20250913_142300217.PORTRAIT.jpg" alt="Ashwin Prabhu" 
+             class="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover shadow-lg border-4 border-red-500">
       </div>
-      <div class="sm:hidden text-gray-300">
-        <button aria-label="Open menu" class="text-xl"><i class="fas fa-bars"></i></button>
-      </div>
-    </nav>
-  </header>
 
-  <!-- HERO / HOME -->
-  <main id="home" class="min-h-screen flex items-center">
-    <div class="max-w-6xl mx-auto px-6 py-24 w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <!-- Left: text -->
-        <div class="space-y-6">
-          <p class="inline-flex items-center text-sm text-gray-300 uppercase tracking-wider">
-            <span class="mr-2 inline-block w-2 h-2 rounded-full dot"></span>
-            Software Engineer • SAP Labs India
-          </p>
+      <!-- Text (second on mobile, first on desktop) -->
+      <div class="order-2 md:order-1 space-y-6 text-center md:text-left">
+        <p class="inline-flex items-center justify-center md:justify-start text-sm text-gray-300 uppercase tracking-wider">
+          <span class="mr-2 inline-block w-2 h-2 rounded-full dot"></span>
+          Software Engineer • SAP Labs India
+        </p>
 
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-            G G Ashwin Prabhu
-            <span class="block text-2xl sm:text-3xl font-semibold text-gray-200 mt-2">Building reliable provisioning & onboarding experiences</span>
-          </h1>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
+          G G Ashwin Prabhu
+        </h1>
 
-          <p class="hero-sub max-w-xl text-gray-300">
-            I design and implement scalable provisioning flows, SaaS onboarding UI, and cloud-native integrations — using Java, TypeScript, Angular, and DevOps tooling to ship robust customer-facing solutions.
-          </p>
+        <p class="text-2xl sm:text-3xl font-semibold text-gray-200">
+          Crafting seamless SaaS experiences, one scalable solution at a time.
+        </p>
 
-          <!-- CTA -->
-          <div class="flex flex-wrap gap-4 mt-4">
-            <a href="#projects" class="cta-red inline-flex items-center gap-3 px-5 py-3 rounded-lg text-sm font-semibold shadow-md transition-transform">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-              View Projects
-            </a>
-            <a href="#contact" class="btn-outline inline-flex items-center gap-3 px-5 py-3 rounded-lg text-sm font-medium transition-transform">
-              <i class="fas fa-paper-plane"></i>
-              Contact Me
-            </a>
-          </div>
+        <p class="hero-sub max-w-xl text-gray-300 mx-auto md:mx-0">
+          I design and develop intuitive UI applications with <span class="text-red-500 font-semibold">Angular</span> and <span class="text-red-500 font-semibold">TypeScript</span>, ensuring exceptional user experiences. 
+          My expertise extends to optimizing <span class="text-red-500 font-semibold">CI/CD pipelines</span> using <span class="text-red-500 font-semibold">GitHub Actions</span> and managing cloud-native deployments on <span class="text-red-500 font-semibold">Kubernetes</span>. 
+          With a focus on app-to-app integration strategies, I bring together complex systems to deliver reliable and scalable solutions.
+        </p>
 
-          <!-- Icons -->
-          <div class="flex items-center gap-4 mt-6">
-            <a href="mailto:ashwinprabhu2001@gmail.com" class="text-gray-300 hover:text-white" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
-            <a href="https://github.com/GGAshwin" class="text-gray-300 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-github fa-lg"></i></a>
-            <a href="https://www.linkedin.com/in/ashwin-prabhu-8a68a71a5/" class="text-gray-300 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg"></i></a>
-          </div>
+        <!-- CTA -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
+          <a href="#projects" class="cta-red inline-flex items-center gap-3 px-5 py-3 rounded-lg text-sm font-semibold shadow-md transition-transform">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14M5 12h14" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn-outline inline-flex items-center gap-3 px-5 py-3 rounded-lg text-sm font-medium transition-transform">
+            <i class="fas fa-paper-plane"></i>
+            Contact Me
+          </a>
         </div>
 
-        <!-- Right visual card -->
-        <div class="relative flex items-center justify-center">
-          <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-xl card-glass">
-            <div class="p-6">
-              <div class="h-44 rounded-md bg-gradient-to-tr from-neutral-800 to-neutral-700 flex items-center justify-center text-white text-sm">
-                <div class="text-center px-4">
-                  <div class="text-xs text-gray-300">Featured — Current Role</div>
-                  <div class="mt-2 font-semibold text-lg">Commerce Provisioning</div>
-                  <div class="mt-1 text-xs text-gray-400">SAP Labs India — Bengaluru</div>
-                </div>
-              </div>
-
-              <div class="mt-4 flex justify-between items-start">
-                <div>
-                  <div class="text-xs text-gray-400">Tech</div>
-                  <div class="mt-1 text-sm text-gray-200">Java · TypeScript · Angular · Spring Boot · Kubernetes</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-xs text-gray-400">Experience</div>
-                  <div class="mt-1 text-sm text-gray-200">Provisioning & automation</div>
-                </div>
-              </div>
-
-              <div class="mt-5 flex gap-3">
-                <a href="https://github.com/GGAshwin" class="px-3 py-2 rounded-md border border-transparent text-sm font-medium btn-outline text-gray-200 hover:bg-white/3" target="_blank">View GitHub</a>
-                <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium cta-red hover:opacity-95">See Projects</a>
-              </div>
-            </div>
-          </div>
-
-          <div aria-hidden class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full accent-blur"></div>
+        <!-- Icons -->
+        <div class="flex justify-center md:justify-start gap-4 mt-6">
+          <a href="mailto:ashwinprabhu2001@gmail.com" class="text-gray-300 hover:text-white" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+          <a href="https://github.com/GGAshwin" class="text-gray-300 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://www.linkedin.com/in/ashwin-prabhu-8a68a71a5/" class="text-gray-300 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg"></i></a>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+</main>
+
+
 
     <!-- ABOUT -->
   <section id="about" class="about-bg py-20">
@@ -180,68 +181,17 @@
   </section>
 
     <!-- PROJECTS -->
-  <section id="projects" class="projects-bg py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
-        My <span class="text-red-500">Projects</span>
-      </h2>
+<section id="projects" class="projects-bg py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+      My <span class="text-red-500">Projects</span>
+    </h2>
 
-      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Project Card -->
-        <div class="project-card card-glass overflow-hidden">
-          <div class="h-40 bg-neutral-800 flex items-center justify-center text-gray-500 text-sm">
-            <!-- Placeholder image -->
-            <span>Project Image</span>
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-semibold text-red-500">Bloggerline</h3>
-            <p class="text-gray-300 text-sm mt-2">
-              A MERN stack blog application where users can write and view blogs.
-            </p>
-            <p class="text-xs text-gray-400 mt-2">MongoDB · Express · React · Node.js</p>
-            <div class="flex gap-3 mt-4">
-              <a href="https://bloggerline.vercel.app/" target="_blank" class="cta-red px-3 py-1 rounded text-xs font-medium">Live</a>
-              <a href="https://github.com/GGAshwin/bloggerline" target="_blank" class="btn-outline px-3 py-1 rounded text-xs font-medium">GitHub</a>
-            </div>
-          </div>
-        </div>
+    <!-- JS will inject project cards here -->
+    <div id="projects-grid" class="grid gap-10 md:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
 
-        <div class="project-card card-glass overflow-hidden">
-          <div class="h-40 bg-neutral-800 flex items-center justify-center text-gray-500 text-sm">
-            <span>Project Image</span>
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-semibold text-red-500">Blockchain based Voting Application</h3>
-            <p class="text-gray-300 text-sm mt-2">
-              A secure voting application for managing user participation and results.
-            </p>
-            <p class="text-xs text-gray-400 mt-2">Solidity · Node.js · Express · React</p>
-            <div class="flex gap-3 mt-4">
-              <a href="https://github.com/GGAshwin/Eth-Voting.git" target="_blank" class="btn-outline px-3 py-1 rounded text-xs font-medium">GitHub</a>
-            </div>
-          </div>
-        </div>
-
-                <div class="project-card card-glass overflow-hidden">
-          <div class="h-40 bg-neutral-800 flex items-center justify-center text-gray-500 text-sm">
-            <span>Project Image</span>
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-semibold text-red-500">Pair--Plan</h3>
-            <p class="text-gray-300 text-sm mt-2">
-              A collaborative checklist application that enables users to join workspaces, create and manage shared
-              checklists.
-            </p>
-            <p class="text-xs text-gray-400 mt-2">Java · Spring Boot · SQL</p>
-            <div class="flex gap-3 mt-4">
-              <a href="https://github.com/GGAshwin/PairPlan---backend" target="_blank" class="btn-outline px-3 py-1 rounded text-xs font-medium">GitHub</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
 
     <!-- CONTACT -->
@@ -305,8 +255,100 @@
       }, 2000);
     });
   });
-
   </script>
+
+  <script>
+  const projects = [
+    {
+      title: "Bloggerline",
+      description: "A MERN stack blog application where users can write and view blogs.",
+      tech: "MongoDB · Express · React · Node.js",
+      live: "https://bloggerline.vercel.app/",
+      github: "https://github.com/GGAshwin/bloggerline",
+      image: "./images/bloggerline.png" // optional placeholder
+    },
+    {
+      title: "Hotel Booking API",
+      description: "Part of a microservices project, this API handles authentication, payments, and feedback services, built using Node.js, Express, and MongoDB. It integrates seamlessly with Spring Boot services and includes secure JWT-based authentication and API rate limiting.",
+      tech: "Node.js · Express · MongoDB · JWT · API Rate Limiting",
+      live: "",
+      github: "https://github.com/GGAshwin/Hotel-Booking-API",
+      image: "images/hotel-booking.png"
+    },
+    {
+      title: "Pair-Plan API",
+      description: "A collaborative checklist application that enables users to join workspaces, create and manage shared checklists.",
+      tech: "Java · Spring Boot · SQL",
+      live: "",
+      github: "https://github.com/GGAshwin/PairPlan---backend",
+      image: "images/pairplan.png"
+    }
+  ];
+
+  const grid = document.getElementById("projects-grid");
+
+  projects.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "project-card card-glass overflow-hidden";
+
+    card.innerHTML = `
+      <div class="h-40 bg-neutral-800 flex items-center justify-center text-gray-500 text-sm">
+        ${p.image ? `<img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">` : `<span>Project Image</span>`}
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-semibold text-red-500">${p.title}</h3>
+        <p class="text-gray-300 text-sm mt-2">${p.description}</p>
+        <p class="text-xs text-gray-400 mt-2">${p.tech}</p>
+        <div class="flex gap-3 mt-4">
+          ${p.live ? `<a href="${p.live}" target="_blank" class="cta-red px-3 py-1 rounded text-xs font-medium">Live</a>` : ""}
+          ${p.github ? `<a href="${p.github}" target="_blank" class="btn-outline px-3 py-1 rounded text-xs font-medium">GitHub</a>` : ""}
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+</script>
+
+<script>
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("bg-[#030303]/95", "shadow-md", "backdrop-blur-md");
+    } else {
+      navbar.classList.remove("bg-[#030303]/95", "shadow-md", "backdrop-blur-md");
+    }
+  });
+</script>
+
+<!-- Navbar script -->
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  let isOpen = false;
+
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      mobileMenu.classList.remove("hidden");
+      menuBtn.innerHTML = '<i class="fas fa-times"></i>'; // change to "X"
+    } else {
+      mobileMenu.classList.add("hidden");
+      menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // back to hamburger
+    }
+  });
+
+  // Optional: auto-close menu on link click
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      isOpen = false;
+    });
+  });
+</script>
+
   
 </body>
 </html>
