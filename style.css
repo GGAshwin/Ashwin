@@ -356,7 +356,6 @@
   border-radius: 50%;
   background: linear-gradient(45deg, #A91629, #25262A);
   padding: 8px;
-  animation: float 6s ease-in-out infinite;
 }
 .hero-image .img-container img {
   width: 100%;
