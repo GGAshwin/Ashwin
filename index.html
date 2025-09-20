@@ -1,264 +1,354 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Hello, welcome to my personal portfolio, feel free to contact me for my services"
-    />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="canonical" href="https://www.ashwin.vercel.app" />
-    <meta
-      content="GG Ashwin Prabhu is a Web Developer from Mangalore, India. Ashwin Prabhu is currenty pursuing his BE in Computer Science. Feel free to contact GG Ashwin Prabhu"
-      property="og:description"
-    />
-    <meta
-      name="keywords"
-      content="ggashwinprabhu, GG ASHWIN PRABHU, ASHWIN PRABHU, ASHWIN DEVELOPER, GG ASHWIN, ashwin.vercel.app, www.ashwin.vercel.app, Ashwin Prabhu, ashwin, Ashwin, ASHWIN GG, ASHWIN GG, Ashwin, gg ashwin, ashwin portfolio, gg ashwin prabhu portfolio, gg ashwin portfolio, gg ashwin developer portfolio, ashwin gg portfolio"
-    />
-    <meta name="author" content="GG ASHWIN PRABHU" />
-    <meta
-      content="GG Ashwin Prabhu | Developer Portfolio"
-      property="og:title"
-    />
-    <meta content="https://ashwin.vercel.app" property="og:url" />
-    <meta content="website" property="og:type" />
-    <meta name="robots" content="index,follow" />
-    <title>GG Ashwin Prabhu | Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>G G Ashwin Prabhu — Portfolio</title>
 
-  <body>
-    <!-- loading -->
-    <div class="loading">
-      <div class="ring">
-        Loading
-        <span class="loadSpan"></span>
-      </div>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2d9b7b8a1.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" crossorigin="anonymous"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="hero-bg min-h-screen antialiased">
+
+<!-- NAV -->
+<header id="navbar" class="w-full fixed top-0 left-0 z-50 transition-colors duration-300">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="text-white text-lg font-semibold">
+      Ashwin<span class="ml-1 text-red-500">.</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="space-x-4 hidden sm:flex">
+      <a href="#about" class="text-sm text-gray-300 hover:text-white">About</a>
+      <a href="#projects" class="text-sm text-gray-300 hover:text-white">Projects</a>
+      <a href="#contact" class="text-sm text-gray-300 hover:text-white">Contact</a>
     </div>
 
-    <!-- Nav -->
-    <nav class="navbar">
-      <div class="brand-title">
-        <a href="#"
-          ><span><img src="./images/A.png" alt="" height="25px" /></span
-          >shwin</a
-        >
-      </div>
-      <div class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about-section">About</a></li>
-          <li><a href="#project-section">Projects</a></li>
-          <li><a href="#contact-section">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- Mobile button -->
+    <div class="sm:hidden text-gray-300">
+      <button id="menu-btn" aria-label="Open menu" class="text-xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Home Section -->
-    <!-- <section id="home-section">
-      <div id="hero-image">
-        <div class="img-container">
-          <img src="./images/IMG_2095.png" alt="" width="200px" />
-        </div>
-      </div>
-      <div id="hero-content">
-        <h1>Hello, I'm <span>Ashwin</span></h1>
-        <h2>I'm a <span id="typewrite">Web Developer</span></h2>
-      </div>
-    </section> -->
+  <!-- Mobile dropdown menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-[#030303]/95 backdrop-blur-md border-t border-gray-700">
+    <div class="flex flex-col space-y-3 px-6 py-4">
+      <a href="#about" class="text-gray-300 hover:text-white">About</a>
+      <a href="#projects" class="text-gray-300 hover:text-white">Projects</a>
+      <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+    </div>
+  </div>
+</header>
 
-    <section id="home-section" class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>Hello, I'm <span>Ashwin</span></h1>
-          <h2>I'm a <span id="typewrite">Web Developer</span></h2>
-          <p class="hero-description">
-            I specialize in building dynamic and responsive web applications
-            from the ground up. Welcome to my creative corner of the internet.
-          </p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">My Projects</a>
-            <a href="#contact-section" class="btn btn-secondary"
-              >Get In Touch</a
-            >
-          </div>
-          <div class="hero-socials">
-            <a
-              href="https://github.com/GGAshwin"
-              target="_blank"
-              aria-label="GitHub"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://linkedin.com/in/ashwin-prabhu-8a68a71a5/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-          </div>
+
+<!-- HERO / HOME -->
+<main id="home" class="min-h-screen flex items-center hero-bg">
+  <div class="max-w-6xl mx-auto px-6 py-24 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Image (first on mobile, second on desktop) -->
+      <div class="order-1 md:order-2 flex justify-center">
+        <img src="images/PXL_20250913_142300217.PORTRAIT.jpg" alt="Ashwin Prabhu" 
+             class="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover shadow-lg border-4 border-red-500">
+      </div>
+
+      <!-- Text (second on mobile, first on desktop) -->
+      <div class="order-2 md:order-1 space-y-6 text-center md:text-left">
+        <p class="inline-flex items-center justify-center md:justify-start text-sm text-gray-300 uppercase tracking-wider">
+          <span class="mr-2 inline-block w-2 h-2 rounded-full dot"></span>
+          Software Engineer • SAP Labs India
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white">
+          G G Ashwin Prabhu
+        </h1>
+
+        <p class="text-2xl sm:text-3xl font-semibold text-gray-200">
+          Crafting seamless SaaS experiences, one scalable solution at a time.
+        </p>
+
+        <p class="hero-sub max-w-xl text-gray-300 mx-auto md:mx-0">
+          I design and develop intuitive UI applications with <span class="text-red-500 font-semibold">Angular</span> and <span class="text-red-500 font-semibold">TypeScript</span>, ensuring exceptional user experiences. 
+          My expertise extends to optimizing <span class="text-red-500 font-semibold">CI/CD pipelines</span> using <span class="text-red-500 font-semibold">GitHub Actions</span> and managing cloud-native deployments on <span class="text-red-500 font-semibold">Kubernetes</span>. 
+          With a focus on app-to-app integration strategies, I bring together complex systems to deliver reliable and scalable solutions.
+        </p>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
+          <a href="#projects" class="cta-red inline-flex items-center gap-3 px-5 py-3 rounded-lg text-sm font-semibold shadow-md transition-transform">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14M5 12h14" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn-outline inline-flex items-center gap-3 px-5 py-3 rounded-lg text-sm font-medium transition-transform">
+            <i class="fas fa-paper-plane"></i>
+            Contact Me
+          </a>
         </div>
 
-        <div class="hero-image">
-          <div class="img-container">
-            <img src="./images/IMG_2095.png" alt="A portrait of Ashwin" />
+        <!-- Icons -->
+        <div class="flex justify-center md:justify-start gap-4 mt-6">
+          <a href="mailto:ashwinprabhu2001@gmail.com" class="text-gray-300 hover:text-white" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+          <a href="https://github.com/GGAshwin" class="text-gray-300 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://www.linkedin.com/in/ashwin-prabhu-8a68a71a5/" class="text-gray-300 hover:text-white" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+    <!-- ABOUT -->
+  <section id="about" class="about-bg py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+        About <span class="text-red-500">Me</span>
+      </h2>
+
+      <!-- Summary -->
+      <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-16">
+        I am a Software Engineer at <span class="font-semibold text-white">SAP Labs India</span>, 
+        working on provisioning, onboarding, and automation in the commerce domain.  
+        I specialize in Java, TypeScript, Angular, Spring Boot, and cloud-native services, 
+        and I enjoy designing scalable SaaS solutions and improving customer experiences.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Experience -->
+        <div>
+          <h3 class="text-2xl font-semibold text-red-500 mb-6">Experience</h3>
+          <div class="space-y-6">
+
+            <div class="p-5 rounded-lg shadow-md card-glass">
+              <h4 class="text-lg font-semibold text-white">Software Engineer — SAP Labs India</h4>
+              <p class="text-sm text-gray-400">Mar 2025 - Present · Bengaluru</p>
+              <ul class="mt-3 text-gray-300 text-sm list-disc list-inside space-y-1">
+                <li>Working in the Commerce Provisioning team on SaaS onboarding and provisioning flows.</li>
+                <li>Building backend services with Java & Spring Boot and frontend experiences with Angular & TypeScript.</li>
+                <li>Contributing to CI/CD pipelines using GitHub Actions and Kubernetes-based deployments.</li>
+              </ul>
+            </div>
+
+            <div class="p-5 rounded-lg shadow-md card-glass">
+              <h4 class="text-lg font-semibold text-white">M.Tech — SAP Scholar</h4>
+              <p class="text-sm text-gray-400">Jul 2023 - Mar 2025</p>
+              <ul class="mt-3 text-gray-300 text-sm list-disc list-inside space-y-1">
+                <li>Worked on academic + industrial projects under SAP's M.Tech program with BITS Pilani.</li>
+                <li>Explored AI-driven chatbots, onboarding automation, and open-source engineering topics.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h3 class="text-2xl font-semibold text-red-500 mb-6">Education</h3>
+          <div class="space-y-6">
+
+            <div class="p-5 rounded-lg shadow-md card-glass">
+              <h4 class="text-lg font-semibold text-white">M.Tech in Software Engineering</h4>
+              <p class="text-sm text-gray-400">BITS Pilani (2023 - 2025)</p>
+              <p class="text-gray-300 text-sm mt-2">
+                Specialization in open-source software engineering, microservices, and SaaS applications.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-lg shadow-md card-glass">
+              <h4 class="text-lg font-semibold text-white">B.E. in Computer Science</h4>
+              <p class="text-sm text-gray-400">Canara Engineering College (2019 - 2023)</p>
+              <p class="text-gray-300 text-sm mt-2">
+                Coursework in data structures, distributed systems, and software design; contributed to multiple projects and hackathons.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- about section -->
-    <section id="about-section">
-      <div id="about-image">
-        <img src="./images/rect.png" alt="" />
+    <!-- PROJECTS -->
+<section id="projects" class="projects-bg py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+      My <span class="text-red-500">Projects</span>
+    </h2>
+
+    <!-- JS will inject project cards here -->
+    <div id="projects-grid" class="grid gap-10 md:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
+
+
+
+    <!-- CONTACT -->
+  <section id="contact" class="contact-bg py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+        Get in <span class="text-red-500">Touch</span>
+      </h2>
+      <p class="text-gray-300 max-w-xl mx-auto mb-12">
+        I'm always open to discussing new opportunities, collaborations, or just talking about technology.
+      </p>
+
+      <!-- Contact Links -->
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <a href="mailto:ashwinprabhu2001@gmail.com" class="contact-card">
+          <i class="fas fa-envelope fa-2x mb-3 text-red-500"></i>
+          <span class="text-gray-200">Email</span>
+        </a>
+
+        <a href="https://github.com/GGAshwin" target="_blank" rel="noopener" class="contact-card">
+          <i class="fab fa-github fa-2x mb-3 text-red-500"></i>
+          <span class="text-gray-200">GitHub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ashwin-prabhu-8a68a71a5/" target="_blank" rel="noopener" class="contact-card">
+          <i class="fab fa-linkedin fa-2x mb-3 text-red-500"></i>
+          <span class="text-gray-200">LinkedIn</span>
+        </a>
       </div>
-      <div id="about-content">
-        <div id="about-header">Discover</div>
-        <div id="about-title">About Me</div>
-        <div id="about-para">
-          Hello, I'm GG Ashwin Prabhu, a full-stack developer focused on
-          building scalable and user-centric web applications. Currently, I work
-          at SAP Labs India while also advancing my expertise through a Master
-          of Technology program at BITS, Pilani. My experience is centered on
-          creating robust solutions using frameworks like Angular and React.js
-          for the front-end, alongside Node.js and Spring Boot for the back-end.
-          I am passionate about writing clean, type-safe code to solve complex
-          problems and deliver high-quality digital experiences.
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="w-full text-center py-6 text-xs text-gray-400">
+    © <span id="year"></span> G G Ashwin Prabhu — Built with Tailwind CSS
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', () => {
+      const hero = document.querySelector('#home .max-w-6xl');
+      hero.style.opacity = 0;
+      hero.style.transform = 'translateY(10px)';
+      setTimeout(() => {
+        hero.style.transition = 'opacity 600ms ease, transform 600ms ease';
+        hero.style.opacity = 1;
+        hero.style.transform = 'translateY(0)';
+      }, 80);
+    });
+
+      // Copy email to clipboard
+  document.getElementById("copyEmailBtn").addEventListener("click", () => {
+    const email = "ashwinprabhu2001@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      const btn = document.getElementById("copyEmailBtn");
+      btn.innerHTML = "<i class='fas fa-check mr-2'></i>Email Copied!";
+      setTimeout(() => {
+        btn.innerHTML = "<i class='fas fa-copy mr-2'></i> Copy My Email";
+      }, 2000);
+    });
+  });
+  </script>
+
+  <script>
+  const projects = [
+    {
+      title: "Bloggerline",
+      description: "A MERN stack blog application where users can write and view blogs.",
+      tech: "MongoDB · Express · React · Node.js",
+      live: "https://bloggerline.vercel.app/",
+      github: "https://github.com/GGAshwin/bloggerline",
+      image: "./images/bloggerline.png" // optional placeholder
+    },
+    {
+      title: "Hotel Booking API",
+      description: "Part of a microservices project, this API handles authentication, payments, and feedback services, built using Node.js, Express, and MongoDB. It integrates seamlessly with Spring Boot services and includes secure JWT-based authentication and API rate limiting.",
+      tech: "Node.js · Express · MongoDB · JWT · API Rate Limiting",
+      live: "",
+      github: "https://github.com/GGAshwin/Hotel-Booking-API",
+      image: "images/hotel-booking.png"
+    },
+    {
+      title: "Pair-Plan API",
+      description: "A collaborative checklist application that enables users to join workspaces, create and manage shared checklists.",
+      tech: "Java · Spring Boot · SQL",
+      live: "",
+      github: "https://github.com/GGAshwin/PairPlan---backend",
+      image: "images/pairplan.png"
+    }
+  ];
+
+  const grid = document.getElementById("projects-grid");
+
+  projects.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "project-card card-glass overflow-hidden";
+
+    card.innerHTML = `
+      <div class="h-40 bg-neutral-800 flex items-center justify-center text-gray-500 text-sm">
+        ${p.image ? `<img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">` : `<span>Project Image</span>`}
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-semibold text-red-500">${p.title}</h3>
+        <p class="text-gray-300 text-sm mt-2">${p.description}</p>
+        <p class="text-xs text-gray-400 mt-2">${p.tech}</p>
+        <div class="flex gap-3 mt-4">
+          ${p.live ? `<a href="${p.live}" target="_blank" class="cta-red px-3 py-1 rounded text-xs font-medium">Live</a>` : ""}
+          ${p.github ? `<a href="${p.github}" target="_blank" class="btn-outline px-3 py-1 rounded text-xs font-medium">GitHub</a>` : ""}
         </div>
-        <a href="./resume.pdf" id="resume-link" download="resume.pdf">Resume</a>
       </div>
-    </section>
+    `;
 
-    <!-- Project section -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">My <span>Projects</span></h2>
-        <div class="projects-grid" id="projects-grid"></div>
-      </div>
-    </section>
+    grid.appendChild(card);
+  });
+</script>
 
-    <!-- Contact Section -->
-    <section id="contact-section">
-      <div id="contact-title"><span>Connect</span> With Me</div>
-      <div id="form-container">
-        <form action="https://formspree.io/f/mayvrorb" method="post">
-          <input type="email" placeholder="Email" name="email" />
-          <input type="text" placeholder="Message" name="message" />
-          <div id="btn-container">
-            <input
-              type="submit"
-              value="Stay Connected"
-              onclick="clearFormFields(event)"
-            />
-          </div>
-        </form>
-      </div>
-      <!-- Footer Section -->
-      <footer id="footer-section">
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/ashwin-prabhu-8a68a71a5/"
-              target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a href="https://weather-app-eta-three.vercel.app/" target="_blank"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a href="https://www.instagram.com/instashwin_gg/" target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li><a href="mailto:ashwinprabhu2001@gmail.com">Mail</a></li>
-        </ul>
-      </footer>
-    </section>
+<script>
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("bg-[#030303]/95", "shadow-md", "backdrop-blur-md");
+    } else {
+      navbar.classList.remove("bg-[#030303]/95", "shadow-md", "backdrop-blur-md");
+    }
+  });
+</script>
 
-    <script src="./navbar.js"></script>
-    <script src="./script.js"></script>
-    <!-- typewritter -->
-    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
-    <script>
-      var app = document.getElementById("typewrite");
-      var typewriter = new Typewriter(app, {
-        loop: true,
-      });
-      typewriter
-        .typeString("Web Developer 🌐")
-        .pauseFor(2500)
-        .deleteAll()
-        .typeString("Gamer 🎮")
-        .pauseFor(1500)
-        .deleteAll()
-        .typeString("Computer Science Engineer 💻")
-        .pauseFor(2500)
-        .start();
+<!-- Navbar script -->
 
-      function clearFormFields(event) {
-        // Submit the form first
-        setTimeout(() => {
-          // Clear the input fields after form submission
-          document.querySelector('input[name="email"]').value = "";
-          document.querySelector('input[name="message"]').value = "";
-        }, 100);
-      }
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KTCRVFY85D"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  let isOpen = false;
 
-      gtag("config", "G-KTCRVFY85D");
-    </script>
-  </body>
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      mobileMenu.classList.remove("hidden");
+      menuBtn.innerHTML = '<i class="fas fa-times"></i>'; // change to "X"
+    } else {
+      mobileMenu.classList.add("hidden");
+      menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // back to hamburger
+    }
+  });
+
+  // Optional: auto-close menu on link click
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      isOpen = false;
+    });
+  });
+</script>
+
+  
+</body>
 </html>
