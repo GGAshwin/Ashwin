@@ -1,853 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:wght@200;300;500;600;700&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+:root {
+  --bg1: #030303;
+  --text1: #FFFFFF;
+  --red1: #A91629;
+  --red2: #dc0320;
+  --bg2: #25262A;
+  --footer: #D9D9D9;
 }
 
-$bg1: #030303;
-$text1: #FFFFFF;
-$red1: #A91629;
-$red2: #dc0320;
-$bg2: #25262A;
-$footer: #D9D9D9;
+html { scroll-behavior: smooth; }
 
-#hidden {
-    height: 100vh;
-    opacity: 0;
-    transition: opacity 1s ease-out;
+.hero-bg {
+  background: linear-gradient(180deg, rgba(3,3,3,1) 0%, rgba(37,38,42,1) 60%);
+  color: var(--text1);
 }
 
-#visible {
-    opacity: 1;
+/* Accent dot */
+.dot {
+  background: linear-gradient(90deg, var(--red1), var(--red2));
 }
 
-::-webkit-scrollbar {
-    width: 10px;
+/* CTA button */
+.cta-red {
+  background: linear-gradient(90deg, var(--red1), var(--red2));
+  color: var(--text1);
+  transition: all 0.3s ease;
+}
+.cta-red:hover {
+  box-shadow: 0 10px 30px rgba(217,25,41,0.18);
+  transform: translateY(-3px);
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: $bg1;
+/* Secondary outline button */
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  color: var(--text1);
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.05);
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: $red1;
-    transition: .6s ease-in-out;
+/* Glass effect card */
+.card-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform 0.3s ease;
+}
+.card-glass:hover {
+  transform: scale(1.02);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    transition: .6s ease-in-out;
-    background-color: $red1;
+/* Accent blur circle */
+.accent-blur {
+  background: radial-gradient(circle at 30% 30%, var(--red2), transparent 40%);
+  filter: blur(28px);
+  opacity: 0.2;
 }
 
-.loading {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: $bg2;
+/* Tagline */
+.hero-sub {
+  font-size: 1.05rem;
+  opacity: 0.95;
 }
 
-.ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    background: transparent;
-    border: 3px solid #3c3c3c;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 150px;
-    font-family: sans-serif;
-    font-size: 20px;
-    color: #fff000;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    text-shadow: 0 0 10px #fff000;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+.about-bg {
+  background: var(--bg1);
 }
 
-.ring:before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid transparent;
-    border-top: 3px solid #fff000;
-    border-right: 3px solid #fff000;
-    border-radius: 50%;
-    animation: animateC 2s linear infinite;
+.about-bg h2 {
+  letter-spacing: 0.5px;
 }
 
-.loadSpan {
-    display: block;
-    position: absolute;
-    top: calc(50% - 2px);
-    left: 50%;
-    width: 50%;
-    height: 4px;
-    background: transparent;
-    transform-origin: left;
-    animation: animate 2s linear infinite;
+.card-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.3s ease;
+}
+.card-glass:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.loadSpan:before {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #fff000;
-    top: -6px;
-    right: -8px;
-    box-shadow: 0 0 20px #fff000;
-}
-
-@keyframes animateC {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    100% {
-        transform: rotate(405deg);
-    }
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $bg1;
-    position: fixed;
-    top: 0;
-    padding: 20px;
-    width: 100%;
-    z-index: 999;
-}
-
-.brand-title {
-    a {
-        color: $text1;
-        text-decoration: none;
-        font-size: 30px;
-        margin-left: 20px;
-    }
-}
-
-.brand-title a {
-    transition: .3s ease-in-out;
-}
-
-
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin-right: 50px;
-}
-
-.navbar-links li {
-    margin: 0 10px;
-    list-style: none;
-    transition: .3s ease-in-out;
-    font-size: 1.2rem;
-}
-
-.navbar-links li a {
-    text-decoration: none;
-    color: $text1;
-    padding: 1rem;
-    display: block;
-    font-size: 15px;
-    transition: .2s ease-in-out;
-}
-
-.navbar-links li a {
-    text-decoration: none;
-    position: relative;
-}
-
-.navbar-links li a:after {
-    position: absolute;
-    content: '';
-    height: 2px;
-    bottom: 10px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    width: 0%;
-    background: $bg1(0, 0, 0);
-    -o-transition: .5s;
-    -ms-transition: .5s;
-    -moz-transition: .5s;
-    -webkit-transition: .5s;
-    transition: .5s;
-}
-
-.navbar-links li a:hover:after {
-    width: 60%;
-    background: $red1;
-}
-
-.navbar-links li a:hover {
-    color: $red1;
-}
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    margin-right: 50px;
-    margin-top: 15px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: $text1;
-    border-radius: 10px;
-}
-
-@media only screen and (max-width: 768px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
-    .toggle-button {
-        display: flex;
-    }
-
-    .toggle-button:hover {
-        cursor: pointer;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links li {
-        text-align: center;
-    }
-
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-}
-
-// Home Section
-
-// --- Hero Section Styles ---
-.hero {
-    background-color: $bg1;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    overflow: hidden;
-  }
-  
-  .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1200px;
-    width: 100%;
-  }
-  
-  // --- Text Content (Left Column) ---
-  .hero-text {
-    h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      color: $text1;
-      margin-bottom: 0.5rem;
-      line-height: 1.1;
-  
-      span {
-        color: $red1;
-      }
-    }
-  
-    h2 {
-      font-size: 2rem;
-      font-weight: 400;
-      color: $footer;
-      margin-bottom: 1.5rem;
-  
-      #typewrite {
-        color: $text1;
-        font-weight: 600;
-      }
-    }
-  
-    .hero-description {
-      font-size: 1.1rem;
-      color: $footer;
-      line-height: 1.6;
-      max-width: 500px;
-      margin-bottom: 2rem;
-    }
-  }
-  
-  // --- Call-to-Action Buttons ---
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  
-    .btn {
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
-  
-    .btn-primary {
-      background-color: $red1;
-      color: $text1;
-  
-      &:hover {
-        background-color: $red2;
-        transform: translateY(-3px);
-      }
-    }
-  
-    .btn-secondary {
-      background-color: transparent;
-      color: $text1;
-      border: 2px solid $bg2;
-  
-      &:hover {
-        background-color: $bg2;
-        border-color: $bg2;
-        transform: translateY(-3px);
-      }
-    }
-  }
-  
-  // --- Social Icons ---
-  .hero-socials {
-    display: flex;
-    gap: 1.5rem;
-  
-    a {
-      color: $footer;
-      transition: all 0.3s ease;
-  
-      svg {
-        width: 28px;
-        height: 28px;
-      }
-  
-      &:hover {
-        color: $red1;
-        transform: scale(1.1);
-      }
-    }
-  }
-  
-  // --- Image (Right Column) ---
-  .hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    .img-container {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      // Creates a glowing border effect
-      background: linear-gradient(45deg, $red1, $bg2);
-      padding: 8px;
-    //   animation: float 6s ease-in-out infinite;
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid $bg1;
-      }
-    }
-  }
-  
-  // --- Floating Animation ---
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-  }
-  
-  // --- Responsive Adjustments ---
-  @media (max-width: 992px) {
-    .hero-container {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 2rem;
-      // Puts the text before the image on mobile
-      .hero-text { order: 2; }
-      .hero-image { order: 1; }
-    }
-  
-    .hero-text {
-      h1 { font-size: 3rem; }
-      h2 { font-size: 1.5rem; }
-      .hero-description { margin-left: auto; margin-right: auto; }
-      .hero-cta, .hero-socials { justify-content: center; }
-    }
-  
-    .hero-image .img-container {
-      width: 280px;
-      height: 280px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-      .hero-text h1 { font-size: 2.5rem; }
-      .hero-cta { flex-direction: column; align-items: center; }
-  }
-
-@media only screen and (max-width: 768px) {
-    #home-section {
-        padding: 20px;
-    }
-
-    #home-section #hero-content {
-        font-size: 1.3em;
-    }
-}
-
-// About section
-
-#about-section {
-    min-height: 100vh;
-    background: $bg1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-
-    #about-image {
-        max-width: 30%;
-
-        img {
-            width: 400px;
-        }
-    }
-
-    #about-content {
-        max-width: 30%;
-        color: $text1;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        flex-direction: column;
-
-        #about-header {
-            color: $red1;
-            font-size: 2em;
-        }
-
-        #about-title {
-            font-size: 3em;
-            position: relative;
-        }
-
-        #about-title:after {
-            position: absolute;
-            content: '';
-            height: 4px;
-            bottom: 5px;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            width: 100%;
-            border-radius: 5px;
-            background: $red1;
-        }
-
-        #about-para {
-            line-height: 2em;
-        }
-
-        #resume-link {
-            background-color: $text1;
-            text-decoration: none;
-            color: $bg1;
-            border-radius: 50px 25px;
-            padding: 5px 15px;
-            transition: .5s ease-in-out;
-            margin-top: 1em;
-
-            &:hover {
-                background-color: $red1;
-                color: $text1;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #about-section {
-        flex-direction: column;
-        padding-bottom: 50px;
-
-        #about-image {
-            padding: 40px 20px;
-            max-width: 100%;
-            max-height: 30%;
-
-            img {
-                width: 300px;
-            }
-        }
-
-        #about-content {
-            max-width: 80%;
-            ;
-        }
-    }
-}
-
-// Project Section
-#projects {
-    background-color: $bg2;
-    padding: 80px 0;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: $text1;
-    margin-bottom: 50px;
-
-    span {
-        color: $red1;
-    }
-}
-
-.projects-grid {
-    display: grid;
-    // This creates a responsive grid that adjusts the number of columns automatically
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+.projects-bg {
+  background: var(--bg2);
 }
 
 .project-card {
-    background-color: $bg1;
-    border: 1px solid lighten($bg2, 10%);
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-
-    // --- ANIMATION STYLES START ---
-    // 1. Set the initial state for the animation
-    opacity: 0;
-    transform: translateY(30px);
-
-    // 2. Define the transition for all properties
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease;
-
-    // 3. Define the final state when the card becomes visible
-    &.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    // --- ANIMATION STYLES END ---
-
-    &:hover {
-        // The hover effect will now smoothly override the base state
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba($red2, 0.2);
-    }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
-.project-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; // Ensures the image covers the area without distortion
-        transition: transform 0.3s ease;
-    }
-
-    .project-card:hover & img {
-      transform: scale(1.05); // Slight zoom on the image on hover
-    }
+/* Placeholder image area */
+.project-card .h-40 {
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.project-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; // Allows content to fill the available space
+.contact-bg {
+  background: var(--bg1);
 }
 
-.project-title {
-    font-size: 1.5rem;
-    color: $text1;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.project-description {
-    font-size: 0.95rem;
-    color: $footer; // Using the light grey for description for contrast
-    line-height: 1.6;
-    flex-grow: 1; // Pushes the tags and links to the bottom
-    margin-bottom: 1.5rem;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.tech-tag {
-    background-color: $bg2;
-    color: $text1;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.3rem 0.75rem;
-    border-radius: 20px; // Pill shape
-    border: 1px solid lighten($bg2, 15%);
-}
-
-.project-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: auto; // Pushes the links to the very bottom of the card
-}
-
-.project-link {
-    color: $text1;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-
-    svg {
-        width: 20px;
-        height: 20px;
-        stroke: $text1;
-        transition: stroke 0.3s ease;
-    }
-
-    &:hover {
-        color: $red2;
-
-        svg {
-            stroke: $red2;
-        }
-    }
-}
-
-// Media query for smaller screens
-@media (max-width: 400px) {
-    .projects-grid {
-        // Adjust minmax for very small screens to prevent overflow
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 
 
-
-// contact section
-#contact-section {
-    min-height: 70vh;
-    background-color: $bg1;
-    padding: 50px;
-    position: relative;
-
-    #contact-title {
-        color: $text1;
-        font-size: 2em;
-
-        span {
-            color: $red1;
-        }
-    }
-
-    #form-container {
-        height: 100%;
-        margin-top: 10px;
-
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            gap: 20px;
-
-            input[type="text"],
-            input[type="email"] {
-                border: 2px solid $red1;
-                padding: 10px 30px;
-                background-color: transparent;
-                color: $text1;
-                width: 50%;
-                height: 80px;
-                font-size: 1.3em;
-            }
-
-            #btn-container {
-                input[type="submit"] {
-                    border: 2px solid $text1;
-                    background: $text1;
-                    color: $bg1;
-                    margin-left: auto;
-                    height: 50px;
-                    padding: 10px 30px;
-                    border: none;
-                    transition: 0.5s ease-in-out;
-
-                    &:hover {
-                        cursor: pointer;
-                        background-color: $red1;
-                        color: $text1;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    #contact-section {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        flex-direction: column;
-        min-height: 60vh;
-
-        #form-container {
-            width: 80%;
-            margin-top: 0;
-
-            form {
-                width: 100%;
-
-                input[type="text"],
-                input[type="email"] {
-                    padding: 0 10px;
-                    width: 100%;
-                }
-
-                #btn-container {
-                    input[type="submit"] {}
-                }
-            }
-        }
-    }
-}
-
-// footer section
-
-#footer-section {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background-color: $footer ;
-    width: 90%;
-    padding: 30px 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 20px;
-
-    ul {
-        width: 30%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-
-        li {
-            list-style: none;
-            display: inline-block;
-
-            a {
-                text-decoration: none;
-                color: $bg1;
-                padding: 5px;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    #footer-section {
-        ul {
-            width: 60%;
-        }
-    }
+@media (max-width: 640px) {
+  .hero-sub { font-size: 1rem; }
 }
